@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Mineable
+  - Crafting
   layers:
   - Default
   - TransparentFX

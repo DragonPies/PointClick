@@ -6,10 +6,7 @@ public class Crafting : MonoBehaviour
 
     void Start()
     {
-        if (craftingUI = null)
-        {
-            craftingUI = GameObject.Find("CraftingMenu");
-        }
+     
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

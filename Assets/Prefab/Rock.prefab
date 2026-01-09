@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rock: 1
   tree: 0
-  materialHealth: 3
+  materialHealth: 10
+  hardness: 3
   playerStats: {fileID: 0}
   UI: {fileID: 0}

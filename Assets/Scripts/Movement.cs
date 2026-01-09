@@ -26,8 +26,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(1) && selected)
         {
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            _anim.SetFloat("x", _playerRB2D.linearVelocityX);
-            _anim.SetFloat("y", _playerRB2D.linearVelocityY);
+           //_anim.SetFloat("x", _playerRB2D.linearVelocityX);
+           //_anim.SetFloat("y", _playerRB2D.linearVelocityY);
         }
 
 
@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log("Object Selected");
         selected = true;
-        gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
+        gameObject.GetComponent<SpriteRenderer>().color = Color.magenta;
 
         foreach(PlayerMovement obj in moveableObjects)
         {

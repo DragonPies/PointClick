@@ -8,38 +8,42 @@ public class Mineables : MonoBehaviour
     public bool tree;
 
     public int materialHealth = 3;
+    public int hardness;
 
     public Stats playerStats;
 
-    [Header("UI Values")]
-    public MatsUI UI;
+   
 
     
     void Start()
     {
-        UI = GameObject.Find("MatsHUD").GetComponent<MatsUI>();
         playerStats = GameObject.FindWithTag("Player").GetComponent<Stats>();
+    }
+
+        private void Update()
+        {
+            if (materialHealth <= 0)
+            {
+                if (rock)
+                {
+                playerStats.stoneCount += 1;
+                }
+
+                else if (tree)
+                {
+                playerStats.woodCount += 1;
+                }
+                Destroy(gameObject);
+            }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && hardness <= playerStats.breakPower)
             {
-                if (rock)
-                {
-                    Debug.Log("Rock mined");
-                    UI.stoneCount += 1;
-                }
-
-                if (tree)
-                {
-                    Debug.Log("Tree mined");
-                    UI.woodCount += 1;
-                }
-
-                Destroy(this.gameObject);
+                materialHealth -= playerStats.damage;
             }
         }
     }
