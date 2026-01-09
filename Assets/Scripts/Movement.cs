@@ -8,7 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public static List<PlayerMovement> moveableObjects = new List<PlayerMovement>();
     public Vector2 targetPosition;
     public Rigidbody2D _playerRB2D;
-    public float speed;
+
+    public Stats playerStats;
 
     private Animator _anim;
     private bool selected;
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     {
         moveableObjects.Add(this);
         targetPosition = transform.position;
+        playerStats = GameObject.FindWithTag("Player").GetComponent<Stats>();
     }
     void Update()
     {
@@ -28,10 +30,20 @@ public class PlayerMovement : MonoBehaviour
             _anim.SetFloat("y", _playerRB2D.linearVelocityY);
         }
 
-        transform.position = Vector2.MoveTowards(transform.position, targetPosition, Time.deltaTime * speed);
 
-        
+        transform.position = Vector2.MoveTowards(transform.position, targetPosition, Time.deltaTime * playerStats.speed);
 
+
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Mineable"))
+        {
+            Debug.Log("Collided with Mineable, stopping movement");
+            _playerRB2D.linearVelocity = Vector2.zero;
+            targetPosition = transform.position;
+        }
     }
 
     private void OnMouseDown()
@@ -49,4 +61,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
+
+    
 }
