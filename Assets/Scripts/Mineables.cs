@@ -1,3 +1,4 @@
+using BarthaSzabolcs.Tutorial_SpriteFlash;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,19 +11,23 @@ public class Mineables : MonoBehaviour
     public int materialHealth = 3;
     public int hardness;
 
+
     public Stats playerStats;
 
-   
+   public SimpleFlash SimpleFlash;
 
-    
+
     void Start()
     {
         playerStats = GameObject.FindWithTag("Player").GetComponent<Stats>();
+        gameObject.GetComponent<SimpleFlash>();
     }
 
         private void Update()
         {
-            if (materialHealth <= 0)
+       
+
+        if (materialHealth <= 0)
             {
                 if (rock)
                 {
@@ -41,9 +46,20 @@ public class Mineables : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             
-            if (Input.GetMouseButtonDown(0) && hardness <= playerStats.breakPower)
+            if (Input.GetMouseButtonDown(0))
             {
-                materialHealth -= playerStats.damage;
+                
+                if (rock && playerStats.pickBreakPower >= hardness)
+                {
+                    materialHealth -= playerStats.pickDamage;
+                    SimpleFlash.Flash();
+                }
+                else if (tree && playerStats.axeBreakPower >= hardness)
+                {
+                    materialHealth -= playerStats.axeDamage;
+                    SimpleFlash.Flash();
+                }
+                
             }
         }
     }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5524286500893279409}
   - component: {fileID: 1388158527884092680}
   - component: {fileID: 1686784251478599750}
+  - component: {fileID: 7206028304664600355}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Mineable
@@ -150,6 +151,19 @@ MonoBehaviour:
   rock: 1
   tree: 0
   materialHealth: 10
-  hardness: 3
+  hardness: 2
   playerStats: {fileID: 0}
-  UI: {fileID: 0}
+--- !u!114 &7206028304664600355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7514912314602565622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce6257cb904ca5f40a1b041066576999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: a2d4c894093aa74459b567d9a4b4a6c7, type: 2}
+  duration: 0.125
