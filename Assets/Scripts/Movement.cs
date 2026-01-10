@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
         moveableObjects.Add(this);
         targetPosition = transform.position;
         playerStats = GameObject.FindWithTag("Player").GetComponent<Stats>();
+        _anim = GetComponent<Animator>();
     }
     void Update()
     {
@@ -26,12 +27,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(1) && selected)
         {
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-           //_anim.SetFloat("x", _playerRB2D.linearVelocityX);
-           //_anim.SetFloat("y", _playerRB2D.linearVelocityY);
         }
+            _anim.SetFloat("x", _playerRB2D.linearVelocityX);
+            _anim.SetFloat("y", _playerRB2D.linearVelocityY);
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, Time.deltaTime * playerStats.speed);
 
 
-        transform.position = Vector2.MoveTowards(transform.position, targetPosition, Time.deltaTime * playerStats.speed);
+        
 
 
     }
@@ -45,6 +47,17 @@ public class PlayerMovement : MonoBehaviour
             targetPosition = transform.position;
         }
     }
+
+    public void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Mineable"))
+        {
+            Debug.Log("Staying in collision with Mineable, stopping movement");
+            _playerRB2D.linearVelocity = Vector2.zero;
+            targetPosition = transform.position;
+        }
+    }
+
 
     private void OnMouseDown()
     {

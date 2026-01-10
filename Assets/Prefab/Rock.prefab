@@ -153,6 +153,7 @@ MonoBehaviour:
   materialHealth: 10
   hardness: 2
   playerStats: {fileID: 0}
+  SimpleFlash: {fileID: 7206028304664600355}
 --- !u!114 &7206028304664600355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,4 +167,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: a2d4c894093aa74459b567d9a4b4a6c7, type: 2}
-  duration: 0.125
+  duration: 0.001
