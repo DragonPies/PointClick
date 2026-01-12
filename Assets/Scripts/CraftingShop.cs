@@ -6,9 +6,20 @@ public class CraftingShop : MonoBehaviour
     public Stats stats;
 
     [Header("Item Purchase Status")]
+    public bool woodenSwordBought;
+
+    public bool woodenShieldBought;
+
     public bool woodenPickBought;
+
     public bool woodenAxeBought;
+
+    public bool stoneSwordBought;
+
+    public bool stoneShieldBought;
+
     public bool stonePickBought;
+
     public bool stoneAxeBought;
 
 
@@ -24,6 +35,27 @@ public class CraftingShop : MonoBehaviour
         
     }
 
+    public void BuyWoodenSword()
+    {
+        if (stats.woodCount >= 10 && !woodenSwordBought)
+        {
+            stats.woodCount -= 10;
+            stats.atkdamage = 2;
+            woodenSwordBought = true;
+            stoneSwordBought = false;
+        }
+    }
+
+    public void BuyWoodenShield()
+    {
+        if (stats.woodCount >= 8 && !woodenShieldBought)
+        {
+            stats.woodCount -= 8;
+            stats.defense = 5;
+            woodenShieldBought = true;
+            stoneShieldBought = false;
+        }
+    }
     public void BuyWoodenPick()
     {
         
@@ -47,6 +79,29 @@ public class CraftingShop : MonoBehaviour
             stats.axeDamage = 2;
             woodenAxeBought = true;
             stoneAxeBought = false;
+        }
+    }
+
+    public void BuyStoneSword()
+    {
+        if (stats.woodCount >= 10 && stats.stoneCount >= 15 && !stoneSwordBought)
+        {
+            stats.woodCount -= 10;
+            stats.atkdamage = 3;
+            woodenSwordBought = false;
+            stoneSwordBought = true;
+        }
+    }
+
+    public void BuyStoneShield()
+    {
+        if (stats.woodCount >= 8 && stats.stoneCount >= 12 && !stoneShieldBought)
+        {
+            stats.woodCount -= 8;
+            stats.stoneCount -= 12;
+            stats.defense = 10;
+            woodenShieldBought = false;
+            stoneShieldBought = true;
         }
     }
     public void BuyStonePick()

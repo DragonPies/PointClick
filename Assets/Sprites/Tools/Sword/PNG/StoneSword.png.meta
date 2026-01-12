@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2d5a608c5ecb74f40947562d40db39ba
+guid: 31f31dead649c9749a6eb7ed2c6b3f96
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1693675698735848151
-    second: stoneAxe_0
+      213: 8645510945980340434
+    second: StoneSword_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,42 +96,16 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: stoneAxe_0
+      name: StoneSword_0
       rect:
         serializedVersion: 2
-        x: 12
+        x: 0
         y: 0
-        width: 18
+        width: 16
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -141,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 925632ceceade78e0800000000000000
-      internalID: -1693675698735848151
+      spriteID: 2d8d8e446660bf770800000000000000
+      internalID: 8645510945980340434
       vertices: []
       indices: 
       edges: []
@@ -160,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      stoneAxe_0: -1693675698735848151
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
