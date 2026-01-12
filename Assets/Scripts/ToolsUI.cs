@@ -33,17 +33,17 @@ public class ToolsUI : MonoBehaviour
             pick.GetComponent<Image>().color = Color.white;
             pick.GetComponent<Image>().sprite = woodenPick;
         }
-        else if (toolUI.stonePickBought)
+        if (toolUI.stonePickBought)
         { 
             pick.GetComponent<Image>().color = Color.white;
             pick.GetComponent<Image>().sprite = stonePick;
         }
-        else if (toolUI.woodenAxeBought)
+        if (toolUI.woodenAxeBought)
         { 
             axe.GetComponent<Image>().color = Color.white;
             axe.GetComponent<Image>().sprite = woodenAxe;
         }
-        else if (toolUI.stoneAxeBought)
+        if (toolUI.stoneAxeBought)
         { 
             axe.GetComponent<Image>().color = Color.white;
             axe.GetComponent<Image>().sprite = stoneAxe;
