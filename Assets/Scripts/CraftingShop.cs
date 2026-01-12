@@ -3,10 +3,14 @@ using UnityEngine.UI;
 
 public class CraftingShop : MonoBehaviour
 {
-    public TMPro.TextMeshProUGUI buyText;
     public Stats stats;
 
-    private bool hasBought;
+    [Header("Item Purchase Status")]
+    public bool woodenPickBought;
+    public bool woodenAxeBought;
+    public bool stonePickBought;
+    public bool stoneAxeBought;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,40 +28,40 @@ public class CraftingShop : MonoBehaviour
     {
         
 
-        if (stats.woodCount >= 5 && !hasBought)
+        if (stats.woodCount >= 5 && !woodenPickBought)
         {
-            buyText.text = "Bought";
             stats.woodCount -= 5;
             stats.pickBreakPower = 2;
             stats.pickDamage = 2;
-            hasBought = true;
+            woodenPickBought = true;
+            stonePickBought = false;
         }
     }
 
     public void BuyWoodenAxe()
     {
-        if (stats.woodCount >= 5 && !hasBought)
+        if (stats.woodCount >= 5 && !woodenAxeBought)
         {
-            buyText.text = "Bought";
             stats.woodCount -= 5;
             stats.axeBreakPower = 2;
             stats.axeDamage = 2;
-            hasBought = true;
+            woodenAxeBought = true;
+            stoneAxeBought = false;
         }
     }
     public void BuyStonePick()
     {
 
 
-        if (stats.stoneCount >= 10 && stats.woodCount >= 5 && !hasBought)
+        if (stats.stoneCount >= 10 && stats.woodCount >= 5 && !stonePickBought)
         {
-            buyText.text = "Bought";
             stats.stoneCount -= 10;
             stats.woodCount -= 5;
             stats.pickBreakPower = 3;
             stats.pickDamage = 3;
-            hasBought = true;
-            
+            stonePickBought = true;
+            woodenPickBought = false;
+
         }
 
    
@@ -67,15 +71,15 @@ public class CraftingShop : MonoBehaviour
     {
 
 
-        if (stats.stoneCount >= 10 && stats.woodCount >= 5 && !hasBought)
+        if (stats.stoneCount >= 10 && stats.woodCount >= 5 && !stoneAxeBought)
         {
-            buyText.text = "Bought";
             stats.stoneCount -= 10;
             stats.woodCount -= 5;
             stats.axeBreakPower = 3;
             stats.axeDamage = 3;
-            hasBought = true;
-            
+            stoneAxeBought = true;
+            woodenAxeBought = false;
+
         }
     }
 
