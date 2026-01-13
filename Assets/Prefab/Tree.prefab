@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4575886741162552423}
   - component: {fileID: 4299744924389531945}
   - component: {fileID: 5423273414199543597}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tree
   m_TagString: Mineable
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rock: 0
   tree: 1
-  materialHealth: 5
+  materialHealth: 10
   hardness: 1
   playerStats: {fileID: 0}
   SimpleFlash: {fileID: 5423273414199543597}
@@ -167,4 +167,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: a2d4c894093aa74459b567d9a4b4a6c7, type: 2}
-  duration: 0.001
+  duration: 0.125

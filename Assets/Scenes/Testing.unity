@@ -433,28 +433,56 @@ PrefabInstance:
       value: 'Player/Inventory[/Keyboard/tab]'
       objectReference: {fileID: 0}
     - target: {fileID: 4778369041413695623, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778369041413695623, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
       propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778369041413695623, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4778369041413695623, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
       propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4778369041413695623, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2089660320}
+    - target: {fileID: 4778369041413695623, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
       propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1401993446}
     - target: {fileID: 4778369041413695623, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778369041413695623, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
       propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778369041413695623, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Attack
       objectReference: {fileID: 0}
     - target: {fileID: 4778369041413695623, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
       propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenInventory
       objectReference: {fileID: 0}
     - target: {fileID: 4778369041413695623, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SpawnHitbox, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778369041413695623, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
       propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Inventory, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778369041413695623, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4778369041413695623, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
       propertyPath: m_ActionEvents.Array.data[20].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -471,6 +499,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5257151354399125363, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2089660312}
+    - targetCorrespondingSourceObject: {fileID: 5257151354399125363, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2089660320}
   m_SourcePrefab: {fileID: 100100000, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
 --- !u!1 &83079549
 GameObject:
@@ -10317,6 +10348,22 @@ MonoBehaviour:
   axeDamage: 1
   stoneCount: 1000
   woodCount: 1000
+--- !u!114 &2089660320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089660304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ae6f8b1040deb45abd09d619bfa754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRadius: 1
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &2101177484
 GameObject:
   m_ObjectHideFlags: 0

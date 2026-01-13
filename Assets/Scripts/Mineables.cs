@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class Mineables : MonoBehaviour
 {
-    [Header("What Is It?")]
+    [Header("StoneLike Mineables")]
     public bool rock;
-    public bool tree;
+    public bool coal;
+    public bool iron;
 
+    [Header("TreeLike Mineables")]
+    public bool tree;
+    public bool oak;
+    public bool pine;
+
+    [Header("Mineable Stats")]
     public int materialHealth = 3;
     public int hardness;
 
-
+    [Header("Player Stats Reference / Flash Frame")]
     public Stats playerStats;
-
    public SimpleFlash SimpleFlash;
 
 
@@ -41,26 +47,19 @@ public class Mineables : MonoBehaviour
                 Destroy(gameObject);
             }
     }
-    private void OnCollisionStay2D(Collision2D collision)
+
+    public void TakeDamage()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (rock && playerStats.pickBreakPower >= hardness)
         {
-            
-            if (Input.GetMouseButtonDown(0))
-            {
-                
-                if (rock && playerStats.pickBreakPower >= hardness)
-                {
-                    materialHealth -= playerStats.pickDamage;
-                    SimpleFlash.Flash();
-                }
-                else if (tree && playerStats.axeBreakPower >= hardness)
-                {
-                    materialHealth -= playerStats.axeDamage;
-                    SimpleFlash.Flash();
-                }
-                
-            }
+            materialHealth -= playerStats.pickDamage;
+            SimpleFlash.Flash();
+        }
+        
+        if (tree && playerStats.axeBreakPower >= hardness)
+        {
+            materialHealth -= playerStats.axeDamage;
+            SimpleFlash.Flash();
         }
     }
 
