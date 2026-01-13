@@ -40,11 +40,33 @@ public class Mineables : MonoBehaviour
                 playerStats.stoneCount += 1;
                 }
 
-                else if (tree)
+                if (coal)
+                { 
+                    playerStats.coalCount += 1;
+                }
+
+                if (iron)
+                { 
+                    playerStats.ironCount += 1;
+                }
+
+                if (tree)
                 {
                 playerStats.woodCount += 1;
                 }
-                Destroy(gameObject);
+
+                if (pine)
+                {
+                    playerStats.pineCount += 1;
+                }
+
+                if (oak)
+                {
+                    playerStats.oakCount += 1;
+                }
+
+
+            Destroy(gameObject);
             }
     }
 
@@ -56,7 +78,31 @@ public class Mineables : MonoBehaviour
             SimpleFlash.Flash();
         }
         
+        if (coal && playerStats.pickBreakPower >= hardness)
+        {
+            materialHealth -= playerStats.pickDamage;
+            SimpleFlash.Flash();
+        }
+
+        if (iron && playerStats.pickBreakPower >= hardness)
+        {
+            materialHealth -= playerStats.pickDamage;
+            SimpleFlash.Flash();
+        }
+
         if (tree && playerStats.axeBreakPower >= hardness)
+        {
+            materialHealth -= playerStats.axeDamage;
+            SimpleFlash.Flash();
+        }
+
+        if (pine && playerStats.axeBreakPower >= hardness)
+        {
+            materialHealth -= playerStats.axeDamage;
+            SimpleFlash.Flash();
+        }
+
+        if (oak && playerStats.axeBreakPower >= hardness)
         {
             materialHealth -= playerStats.axeDamage;
             SimpleFlash.Flash();

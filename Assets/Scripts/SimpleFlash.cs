@@ -14,7 +14,7 @@ namespace BarthaSzabolcs.Tutorial_SpriteFlash
         [SerializeField] private Material flashMaterial;
 
         [Tooltip("Duration of the flash.")]
-        [SerializeField] private float duration;
+        [SerializeField] private float duration = .125f;
 
         #endregion
         #region Private Fields

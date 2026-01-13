@@ -19,8 +19,14 @@ public class Stats : MonoBehaviour
     public int axeBreakPower = 1;
     public int axeDamage = 1;
 
-    [Header("Resource Counts")]
+    [Header("Resource Stones")]
     public int stoneCount;
+    public int coalCount;
+    public int ironCount;
+
+    [Header("Resource Woods")]
     public int woodCount;
+    public int pineCount;
+    public int oakCount;
 
 }
