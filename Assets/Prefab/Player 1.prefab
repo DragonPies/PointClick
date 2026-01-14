@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 4778369041413695623}
   - component: {fileID: 1171636645377118117}
   - component: {fileID: -4521444621003527534}
+  - component: {fileID: -4002588446905530153}
+  - component: {fileID: -7560938121629230278}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -343,7 +345,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   stamina: 100
+  currentStamina: 0
   speed: 5
+  isRunning: 0
+  isSwimming: 0
+  isAlive: 0
   atkdamage: 1
   defense: 0
   pickBreakPower: 0
@@ -356,3 +362,33 @@ MonoBehaviour:
   woodCount: 0
   pineCount: 0
   oakCount: 0
+--- !u!114 &-4002588446905530153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5257151354399125363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1ae6f8b1040deb45abd09d619bfa754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRadius: 1
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &-7560938121629230278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5257151354399125363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba7a3ae93995f234c9f6d6eb34e33933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coolDown: 1
+  staminaDrainAmount: 5

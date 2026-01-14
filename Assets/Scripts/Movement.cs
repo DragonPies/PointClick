@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(1) && selected)
+        if (Input.GetMouseButtonDown(1) /*&& selected*/)
         {
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
+/*
     private void OnMouseDown()
     {
         Debug.Log("Object Selected");
@@ -75,5 +75,5 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    
+    */
 }

@@ -3,9 +3,15 @@ using UnityEngine;
 public class Stats : MonoBehaviour
 {
     [Header("Main Stats")]
-    public int health = 100;
-    public int stamina = 100;
+    public float health = 100;
+    public float stamina = 100;
+    public float currentStamina;
     public float speed = 5f;
+
+    [Header("States of person")]
+    public bool isRunning;
+    public bool isSwimming;
+    public bool isAlive;
 
     [Header("Combat Stats")]
     public int atkdamage = 1;
@@ -28,5 +34,15 @@ public class Stats : MonoBehaviour
     public int woodCount;
     public int pineCount;
     public int oakCount;
+
+
+
+
+    void Start()
+    {
+        isAlive = true;
+        isRunning = false;
+        isSwimming = false;
+    }
 
 }
