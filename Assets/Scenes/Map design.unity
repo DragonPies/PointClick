@@ -390,10 +390,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1483407423975865499, guid: 4effaef843a5f31479610c58a7f7a7a8, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -4521444621003527534, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5257151354399125363, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1124370321}
   m_SourcePrefab: {fileID: 100100000, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
 --- !u!1 &750662055
 GameObject:
@@ -445,6 +449,33 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5257151354399125363, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
   m_PrefabInstance: {fileID: 683914832}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1124370321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124370313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c1f79ccc2ae004fa0d1196d2485b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  stamina: 100
+  speed: 5
+  atkdamage: 1
+  defense: 0
+  pickBreakPower: 0
+  pickDamage: 0
+  axeBreakPower: 1
+  axeDamage: 1
+  stoneCount: 0
+  coalCount: 0
+  ironCount: 0
+  woodCount: 0
+  pineCount: 0
+  oakCount: 0
 --- !u!1 &2132527617
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,10 +509,9 @@ MonoBehaviour:
   tiles:
   - {fileID: 11400000, guid: 3df4477fdb9837d43b53ed43ef2500d6, type: 2}
   - {fileID: 11400000, guid: 1b47a807c069a37488e96cd9b7145fe3, type: 2}
-  - {fileID: 11400000, guid: 9be38062eaac0ad4cb5cd5ef48df6c11, type: 2}
   player: {fileID: 1124370313}
-  width: 50
-  height: 50
+  width: 200
+  height: 100
   seed: 
   useRandomSeed: 1
   randomFillPercent: 48

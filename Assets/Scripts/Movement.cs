@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     {
         moveableObjects.Add(this);
         targetPosition = transform.position;
-        playerStats = GameObject.FindWithTag("Player").GetComponent<Stats>();
+        playerStats = GetComponent<Stats>();
         _anim = GetComponent<Animator>();
     }
     void Update()
@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
         }
             //_anim.SetFloat("x", _playerRB2D.linearVelocityX);
             //_anim.SetFloat("y", _playerRB2D.linearVelocityY);
-        transform.position = Vector2.MoveTowards(transform.position, targetPosition, Time.deltaTime * playerStats.speed);
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, Time.deltaTime * playerStats.speed);
 
 
         

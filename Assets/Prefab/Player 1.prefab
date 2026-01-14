@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3694226921419702016}
   - component: {fileID: 4778369041413695623}
   - component: {fileID: 1171636645377118117}
+  - component: {fileID: -4521444621003527534}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -328,3 +329,30 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5691737, y: 1.0671794}
   m_EdgeRadius: 0
+--- !u!114 &-4521444621003527534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5257151354399125363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c1f79ccc2ae004fa0d1196d2485b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  stamina: 100
+  speed: 5
+  atkdamage: 1
+  defense: 0
+  pickBreakPower: 0
+  pickDamage: 0
+  axeBreakPower: 1
+  axeDamage: 1
+  stoneCount: 0
+  coalCount: 0
+  ironCount: 0
+  woodCount: 0
+  pineCount: 0
+  oakCount: 0
