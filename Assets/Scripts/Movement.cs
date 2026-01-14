@@ -28,9 +28,9 @@ public class PlayerMovement : MonoBehaviour
         {
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
-            _anim.SetFloat("x", _playerRB2D.linearVelocityX);
-            _anim.SetFloat("y", _playerRB2D.linearVelocityY);
-            transform.position = Vector2.MoveTowards(transform.position, targetPosition, Time.deltaTime * playerStats.speed);
+            //_anim.SetFloat("x", _playerRB2D.linearVelocityX);
+            //_anim.SetFloat("y", _playerRB2D.linearVelocityY);
+        transform.position = Vector2.MoveTowards(transform.position, targetPosition, Time.deltaTime * playerStats.speed);
 
 
         
