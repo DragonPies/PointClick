@@ -156,6 +156,7 @@ MonoBehaviour:
   pine: 0
   materialHealth: 40
   hardness: 3
+  staminaDrain: 12
   playerStats: {fileID: 0}
   SimpleFlash: {fileID: 2793747795223066862}
 --- !u!114 &2793747795223066862

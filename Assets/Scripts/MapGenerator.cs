@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using System;
+using Random = UnityEngine.Random;
 
 public class MapGenerator : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class MapGenerator : MonoBehaviour
     public int width;
     public int height;
 
+    public int random;
+
     public string seed;
     public bool useRandomSeed;
 
@@ -23,9 +26,12 @@ public class MapGenerator : MonoBehaviour
 
     public int[,] map;
 
+    public bool noMoreTrees;
+
     // Start is called before the first frame update
     void Start()
     {
+        
         tileMap = GetComponentInChildren<Tilemap>();
         bounds = GetComponent<BoxCollider2D>();
         GenerateMap();
@@ -39,6 +45,7 @@ public class MapGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (map != null)
         {
             for (int x = 0; x < width; x++)
@@ -49,10 +56,18 @@ public class MapGenerator : MonoBehaviour
                     {
                         tileMap.SetTile(new Vector3Int(x, y, 0), tiles[0]);
                     }
-                    else
+                    else if (map[x, y] == 0)
                     {
                         tileMap.SetTile(new Vector3Int(x, y, 0), tiles[1]);
                     }
+                    /*else if (map[x, y] == 2)
+                    { 
+                        tileMap.SetTile(new Vector3Int(x, y, 0), tiles[2]);
+                    }
+                if ((map[x , y] == 2))
+                { 
+                    noMoreTrees = true;
+                }*/
                 }
             }
         }
@@ -85,7 +100,17 @@ public class MapGenerator : MonoBehaviour
             {
                 if (x == 0 || x == width - 1 || y == 0 || y == height - 1)
                 {
-                    map[x, y] = 1;
+                    /*if (random > 50 && !noMoreTrees)
+                    {
+                        map[x, y] = 2;
+                        noMoreTrees = true;
+                        random = Random.Range(0, 100);
+                    }
+                    else
+                    {
+                        random = Random.Range(0, 100);
+                    }*/
+                        map[x, y] = 1;
                 }
                 else
                 {
@@ -104,7 +129,17 @@ public class MapGenerator : MonoBehaviour
                 int neighborWallTiles = GetSurroundingWallCount(x, y);
 
                 if (neighborWallTiles > 4)
-                    map[x, y] = 1;
+                    /*if (random > 50 && !noMoreTrees)
+                    {
+                        map[x, y] = 2;
+                        noMoreTrees = true;
+                        random = Random.Range(0, 100);
+                    }
+                    else
+                    {
+                        random = Random.Range(0, 100);
+                    }*/
+                        map[x, y] = 1;
                 else if (neighborWallTiles < 4)
                 {
                     map[x, y] = 0;

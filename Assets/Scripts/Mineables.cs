@@ -17,25 +17,35 @@ public class Mineables : MonoBehaviour
     [Header("Mineable Stats")]
     public int materialHealth = 3;
     public int hardness;
+    public float staminaDrain;
 
     [Header("Player Stats Reference / Flash Frame")]
     public Stats playerStats;
-   public SimpleFlash SimpleFlash;
-
-
+    public SimpleFlash SimpleFlash;
+    public Transform currentPoint;
+    private Vector3 SetZ(Vector3 vector, float z)
+    {
+        return vector;
+    }
+    
     void Start()
     {
         playerStats = GameObject.FindWithTag("Player").GetComponent<Stats>();
         gameObject.GetComponent<SimpleFlash>();
+
+        currentPoint = gameObject.GetComponent<Transform>();
+
     }
 
         private void Update()
         {
+            currentPoint.transform.position = SetZ(currentPoint.position, 0);
        
 
         if (materialHealth <= 0)
             {
-                if (rock)
+                playerStats.currentStamina -= staminaDrain;
+            if (rock)
                 {
                 playerStats.stoneCount += 1;
                 }

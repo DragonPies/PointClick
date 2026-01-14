@@ -22,13 +22,21 @@ public class Swiming: MonoBehaviour
             currentStats.speed = 2f;
         if (timer <= 0)
         {
-                if (currentStats.stamina <= 0)
-                { 
-                    currentStats.health -= staminaDrainAmount;
+                if (currentStats.currentStamina <= 0)
+                {
+                    currentStats.currentHealth -= staminaDrainAmount;
+                    currentStats.currentStamina = 0;
                 }
-            currentStats.stamina -= staminaDrainAmount;
+                else
+                {
+                    currentStats.currentStamina -= staminaDrainAmount;
+                }
             timer = coolDown;
         }
+        }
+        else
+        {
+            currentStats.speed = 5f;
         }
     }
 }

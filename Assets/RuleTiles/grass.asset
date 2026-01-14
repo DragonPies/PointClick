@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: grass
   m_EditorClassIdentifier: 
   m_DefaultSprite: {fileID: 0}
-  m_DefaultGameObject: {fileID: 0}
+  m_DefaultGameObject: {fileID: 4761708385889728702, guid: 46b9d3da4c2e35848a825b77053465e7, type: 3}
   m_DefaultColliderType: 1
   m_TilingRules:
   - m_Id: 0
     m_Sprites:
-    - {fileID: 7932798033344189819, guid: 68677a5edb0649b468154d6ab3ad6f72, type: 3}
-    m_GameObject: {fileID: 0}
+    - {fileID: 0}
+    m_GameObject: {fileID: 4761708385889728702, guid: 46b9d3da4c2e35848a825b77053465e7, type: 3}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
     m_PerlinScale: 0.5

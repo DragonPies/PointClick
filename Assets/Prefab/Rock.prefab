@@ -149,9 +149,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rock: 1
+  coal: 0
+  iron: 0
   tree: 0
+  oak: 0
+  pine: 0
   materialHealth: 20
   hardness: 2
+  staminaDrain: 5
   playerStats: {fileID: 0}
   SimpleFlash: {fileID: 7206028304664600355}
 --- !u!114 &7206028304664600355

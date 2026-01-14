@@ -4,6 +4,7 @@ public class Stats : MonoBehaviour
 {
     [Header("Main Stats")]
     public float health = 100;
+    public float currentHealth;
     public float stamina = 100;
     public float currentStamina;
     public float speed = 5f;
@@ -43,6 +44,16 @@ public class Stats : MonoBehaviour
         isAlive = true;
         isRunning = false;
         isSwimming = false;
+        currentHealth = health;
+        currentStamina = stamina;
     }
 
+    private void Update()
+    {
+        if (currentHealth > health)
+            currentHealth = health;
+
+        if (currentStamina > stamina)
+            currentStamina = stamina;
+    }
 }

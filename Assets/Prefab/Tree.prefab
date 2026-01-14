@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2780755967592231726}
   - component: {fileID: 6947188495704575454}
   - component: {fileID: 4575886741162552423}
+  - component: {fileID: 3657952371690663853}
   - component: {fileID: 4299744924389531945}
   - component: {fileID: 5423273414199543597}
   m_Layer: 6
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 6853316077166303748, guid: 651d7366d4e4f794aa9c7e02021ab437, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -120,11 +121,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.005828619}
+  m_Offset: {x: 0, y: -0.009402752}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -134,7 +135,53 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 2.0840974}
+  m_Size: {x: 1, y: 2.0536346}
+  m_EdgeRadius: 0
+--- !u!61 &3657952371690663853
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4938547201015293593}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.79710263}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 2}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 0.45656526}
   m_EdgeRadius: 0
 --- !u!114 &4299744924389531945
 MonoBehaviour:
@@ -149,11 +196,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rock: 0
+  coal: 0
+  iron: 0
   tree: 1
+  oak: 0
+  pine: 0
   materialHealth: 10
   hardness: 1
+  staminaDrain: 5
   playerStats: {fileID: 0}
   SimpleFlash: {fileID: 5423273414199543597}
+  currentPoint: {fileID: 0}
 --- !u!114 &5423273414199543597
 MonoBehaviour:
   m_ObjectHideFlags: 0

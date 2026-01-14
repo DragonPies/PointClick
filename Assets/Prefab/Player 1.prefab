@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: -4521444621003527534}
   - component: {fileID: -4002588446905530153}
   - component: {fileID: -7560938121629230278}
+  - component: {fileID: -2609361352992124116}
+  - component: {fileID: -2340390956011023178}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -344,6 +346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  currentHealth: 0
   stamina: 100
   currentStamina: 0
   speed: 5
@@ -392,3 +395,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coolDown: 1
   staminaDrainAmount: 5
+--- !u!114 &-2609361352992124116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5257151354399125363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0884eb2e52fe3c3438555b4643f0a4de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coolDown: 1
+  healthRegenAmount: 5
+--- !u!114 &-2340390956011023178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5257151354399125363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140d568b858d4444e89f89236b442d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coolDown: 1
+  staminaRegenAmount: 5
