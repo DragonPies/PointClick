@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 6482737013037613852, guid: e22b09c6c68fc5144a70956177b5282f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -159,6 +159,7 @@ MonoBehaviour:
   staminaDrain: 8
   playerStats: {fileID: 0}
   SimpleFlash: {fileID: 1832257964846439382}
+  currentPoint: {fileID: 0}
 --- !u!114 &1832257964846439382
 MonoBehaviour:
   m_ObjectHideFlags: 0

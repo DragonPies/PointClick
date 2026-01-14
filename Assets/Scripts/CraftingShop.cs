@@ -5,6 +5,8 @@ public class CraftingShop : MonoBehaviour
 {
     public Stats stats;
 
+    public GameObject craftingTable;
+
     [Header("Item Purchase Status")]
     public bool woodenSwordBought;
 
@@ -33,6 +35,12 @@ public class CraftingShop : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SpawnCraftingTable()
+    {
+        craftingTable.GetComponent<SpriteRenderer>().color = Color.white;
+        Instantiate(craftingTable, stats.currentPoint.transform.position, Quaternion.identity);
     }
 
     public void BuyWoodenSword()

@@ -101,5 +101,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   random: 0
-  objectToSpawn: {fileID: 4938547201015293593, guid: c083b9199b32b834fa022e98d03cf225, type: 3}
+  tree: {fileID: 4938547201015293593, guid: c083b9199b32b834fa022e98d03cf225, type: 3}
+  pine: {fileID: 5828112822458232831, guid: f6e306eb06350ac4ca20100e19241d33, type: 3}
+  oak: {fileID: 8838699797710788540, guid: b5822cd19ca3bad41ba480bfc633c815, type: 3}
+  rock: {fileID: 7514912314602565622, guid: c30296f9e9955134b82b17b3d7455d40, type: 3}
+  coal: {fileID: 3533017510417071440, guid: ec82447275a4f5a47808505c00722b3d, type: 3}
+  iron: {fileID: 6457593048652011943, guid: 0ead4a8712d157243990fe06de1f4b72, type: 3}
   currentPoint: {fileID: 6764744035709381770}

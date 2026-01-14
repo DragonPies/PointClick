@@ -3,7 +3,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public GameObject inventoryUI;
-    private bool isOpen;
+    public bool isOpen = false;
 
     private void Start()
     {
@@ -15,6 +15,7 @@ public class Inventory : MonoBehaviour
         {
             // Code to open the inventory UI
             Debug.Log("Inventory opened.");
+            Time.timeScale = 0f; // Pause the game
             inventoryUI.SetActive(true);
             isOpen = true;
         }
@@ -31,7 +32,8 @@ public class Inventory : MonoBehaviour
     {
         // Code to close the inventory UI
         Debug.Log("Inventory closed.");
-          inventoryUI.SetActive(false);
+        Time.timeScale = 1f; // Resume the game
+        inventoryUI.SetActive(false);
         isOpen = false;
     }
 }

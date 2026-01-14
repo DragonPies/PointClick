@@ -15,11 +15,11 @@ GameObject:
   - component: {fileID: 3694226921419702016}
   - component: {fileID: 4778369041413695623}
   - component: {fileID: 1171636645377118117}
-  - component: {fileID: -4521444621003527534}
   - component: {fileID: -4002588446905530153}
   - component: {fileID: -7560938121629230278}
   - component: {fileID: -2609361352992124116}
   - component: {fileID: -2340390956011023178}
+  - component: {fileID: -6176331570903544754}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -195,7 +195,19 @@ MonoBehaviour:
     m_ActionId: 6b444451-8a00-4d00-a97e-f47457f736a8
     m_ActionName: 'Player/Look[/Mouse/delta,/Pen/delta]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SpawnHitbox, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 6c2ab1b8-8984-453a-af3d-a3c78ae1679a
     m_ActionName: 'Player/Attack[/Mouse/leftButton,/Keyboard/enter]'
   - m_PersistentCalls:
@@ -279,13 +291,29 @@ MonoBehaviour:
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Inventory, Assembly-CSharp
+        m_MethodName: OpenInventory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 356e1335-b04a-448e-b881-5e2626dfdc71
     m_ActionName: 'Player/Inventory[/Keyboard/tab]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 57300b71-88f8-4b11-b6db-07919c9e4e85
+    m_ActionName: 'Player/Inventory close[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: 
-  m_SplitScreenIndex: -1
+  m_SplitScreenIndex: 0
   m_Camera: {fileID: 0}
 --- !u!61 &1171636645377118117
 BoxCollider2D:
@@ -333,38 +361,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.5691737, y: 1.0671794}
   m_EdgeRadius: 0
---- !u!114 &-4521444621003527534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5257151354399125363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74c1f79ccc2ae004fa0d1196d2485b64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  currentHealth: 0
-  stamina: 100
-  currentStamina: 0
-  speed: 5
-  isRunning: 0
-  isSwimming: 0
-  isAlive: 0
-  atkdamage: 1
-  defense: 0
-  pickBreakPower: 0
-  pickDamage: 0
-  axeBreakPower: 1
-  axeDamage: 1
-  stoneCount: 0
-  coalCount: 0
-  ironCount: 0
-  woodCount: 0
-  pineCount: 0
-  oakCount: 0
 --- !u!114 &-4002588446905530153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,3 +419,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coolDown: 1
   staminaRegenAmount: 5
+--- !u!114 &-6176331570903544754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5257151354399125363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c1f79ccc2ae004fa0d1196d2485b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  currentHealth: 0
+  stamina: 100
+  currentStamina: 0
+  speed: 5
+  isRunning: 0
+  isSwimming: 0
+  isAlive: 0
+  atkdamage: 1
+  defense: 0
+  pickBreakPower: 0
+  pickDamage: 0
+  axeBreakPower: 1
+  axeDamage: 1
+  stoneCount: 0
+  coalCount: 0
+  ironCount: 0
+  woodCount: 0
+  pineCount: 0
+  oakCount: 0
+  currentPoint: {fileID: 1980877569531989684}

@@ -36,7 +36,7 @@ public class Stats : MonoBehaviour
     public int pineCount;
     public int oakCount;
 
-
+    public Transform currentPoint;
 
 
     void Start()
