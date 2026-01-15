@@ -39,6 +39,7 @@ public class CraftingShop : MonoBehaviour
 
     public void SpawnCraftingTable()
     {
+        stats.woodCount -= 5;
         craftingTable.GetComponent<SpriteRenderer>().color = Color.white;
         Instantiate(craftingTable, stats.currentPoint.transform.position, Quaternion.identity);
     }
@@ -92,7 +93,7 @@ public class CraftingShop : MonoBehaviour
 
     public void BuyStoneSword()
     {
-        if (stats.woodCount >= 10 && stats.stoneCount >= 15 && !stoneSwordBought)
+        if (stats.pineCount >= 10 && stats.stoneCount >= 15 && !stoneSwordBought)
         {
             stats.woodCount -= 10;
             stats.atkdamage = 3;
@@ -103,7 +104,7 @@ public class CraftingShop : MonoBehaviour
 
     public void BuyStoneShield()
     {
-        if (stats.woodCount >= 8 && stats.stoneCount >= 12 && !stoneShieldBought)
+        if (stats.pineCount >= 8 && stats.stoneCount >= 12 && !stoneShieldBought)
         {
             stats.woodCount -= 8;
             stats.stoneCount -= 12;
@@ -116,7 +117,7 @@ public class CraftingShop : MonoBehaviour
     {
 
 
-        if (stats.stoneCount >= 10 && stats.woodCount >= 5 && !stonePickBought)
+        if (stats.stoneCount >= 10 && stats.pineCount >= 5 && !stonePickBought)
         {
             stats.stoneCount -= 10;
             stats.woodCount -= 5;
@@ -134,7 +135,7 @@ public class CraftingShop : MonoBehaviour
     {
 
 
-        if (stats.stoneCount >= 10 && stats.woodCount >= 5 && !stoneAxeBought)
+        if (stats.stoneCount >= 10 && stats.pineCount >= 5 && !stoneAxeBought)
         {
             stats.stoneCount -= 10;
             stats.woodCount -= 5;
