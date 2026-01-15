@@ -28,13 +28,13 @@ public class CraftingShop : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        stats = GameObject.FindGameObjectWithTag("Player 1").GetComponent<Stats>();
     }
 
     public void SpawnCraftingTable()

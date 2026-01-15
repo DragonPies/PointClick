@@ -26,6 +26,8 @@ public class ToolsUI : MonoBehaviour
 
     [Header("Misc")]
     public CraftingShop toolUI;
+    public CraftingShop combatUI;
+    public CraftingShop structureUI;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,25 +41,25 @@ public class ToolsUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (toolUI.woodenSwordBought)
+        if (combatUI.woodenSwordBought)
         { 
             sword.GetComponent<Image>().color = Color.white;
             sword.GetComponent<Image>().sprite = woodenSword;
         }
 
-        if (toolUI.stoneSwordBought)
+        if (combatUI.stoneSwordBought)
         { 
             sword.GetComponent<Image>().color = Color.white;
             sword.GetComponent<Image>().sprite = stoneSword;
         }
 
-        if (toolUI.woodenShieldBought)
+        if (combatUI.woodenShieldBought)
         { 
             shield.GetComponent<Image>().color = Color.white;
             shield.GetComponent<Image>().sprite = woodenShield;
         }
 
-        if (toolUI.stoneShieldBought)
+        if (combatUI.stoneShieldBought)
         { 
             shield.GetComponent<Image>().color = Color.white;
             shield.GetComponent<Image>().sprite = stoneShield;
