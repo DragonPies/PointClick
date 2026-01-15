@@ -7,7 +7,7 @@ public class Stats : MonoBehaviour
     public float currentHealth;
     public float stamina = 100;
     public float currentStamina;
-    public float speed = 5f;
+    public float speed;
 
     [Header("States of person")]
     public bool isRunning;
@@ -53,7 +53,25 @@ public class Stats : MonoBehaviour
         if (currentHealth > health)
             currentHealth = health;
 
+        if (currentHealth <= 0)
+        {
+            isAlive = false;
+            currentHealth = 0;
+        }
+
         if (currentStamina > stamina)
             currentStamina = stamina;
+
+        if(currentStamina < 0)
+            currentStamina = 0;
+
+        if (isRunning)
+        {
+            speed = 5f;
+        }
+        else
+        {
+            speed = 3f;
+        }
     }
 }

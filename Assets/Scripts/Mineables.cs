@@ -17,7 +17,7 @@ public class Mineables : MonoBehaviour
     [Header("Mineable Stats")]
     public int materialHealth = 3;
     public int hardness;
-    public float staminaDrain;
+    
 
     [Header("Player Stats Reference / Flash Frame")]
     public Stats playerStats;
@@ -44,7 +44,7 @@ public class Mineables : MonoBehaviour
 
         if (materialHealth <= 0)
             {
-                playerStats.currentStamina -= staminaDrain;
+                
             if (rock)
                 {
                 playerStats.stoneCount += 1;

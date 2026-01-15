@@ -14,13 +14,13 @@ GameObject:
   - component: {fileID: 5239651227728715383}
   - component: {fileID: 232747176303228843}
   - component: {fileID: 262971884770928652}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Oak
-  m_TagString: Untagged
+  m_TagString: Mineable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8009400424807333265
 Transform:
   m_ObjectHideFlags: 0
@@ -203,8 +203,7 @@ MonoBehaviour:
   pine: 0
   materialHealth: 30
   hardness: 3
-  staminaDrain: 12
-  playerStats: {fileID: 0}
+  playerStats: {fileID: -6176331570903544754, guid: dc72625223f5ee34cada63f7799077a3, type: 3}
   SimpleFlash: {fileID: 262971884770928652}
   currentPoint: {fileID: 0}
 --- !u!114 &262971884770928652

@@ -26,7 +26,6 @@ public class MapGenerator : MonoBehaviour
 
     public int[,] map;
 
-    public bool noMoreTrees;
 
     // Start is called before the first frame update
     void Start()

@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class Mining : MonoBehaviour
 {
     public float attackRadius = 1f;
+    public float staminaCost = 5f;
     public LayerMask attackLayer;
 
     private PlayerMovement topDown;
@@ -46,8 +47,9 @@ public class Mining : MonoBehaviour
         if (hit)
         {
             Debug.Log(hit.collider.gameObject.name);
-            if (hit.collider.TryGetComponent(out Mineables targetMineable))
+            if (hit.collider.TryGetComponent(out Mineables targetMineable) && currentStats.currentStamina >= staminaCost)
             {
+                currentStats.currentStamina -= staminaCost;
                 targetMineable.TakeDamage();
             }
             

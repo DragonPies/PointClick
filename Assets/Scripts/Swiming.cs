@@ -19,7 +19,7 @@ public class Swiming: MonoBehaviour
         if (currentStats.isSwimming)
         {
             timer -= Time.deltaTime;
-            currentStats.speed = 2f;
+            currentStats.speed = 1f;
         if (timer <= 0)
         {
                 if (currentStats.currentStamina <= 0)
@@ -36,7 +36,7 @@ public class Swiming: MonoBehaviour
         }
         else
         {
-            currentStats.speed = 5f;
+            currentStats.speed = 3f;
         }
     }
 }

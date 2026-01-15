@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2780755967592231726
 Transform:
   m_ObjectHideFlags: 0
@@ -203,7 +203,6 @@ MonoBehaviour:
   pine: 0
   materialHealth: 10
   hardness: 1
-  staminaDrain: 5
   playerStats: {fileID: 0}
   SimpleFlash: {fileID: 5423273414199543597}
   currentPoint: {fileID: 0}
