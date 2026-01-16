@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Debug.Log("Moving to: " + targetPosition);
+        
     }
 
     /*
