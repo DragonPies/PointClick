@@ -60,15 +60,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Mineable"))
-        {
-            Debug.Log("Staying in collision with Mineable, stopping movement");
-            _playerRB2D.linearVelocity = Vector2.zero;
-            targetPosition = transform.position;
-        }
-    }
+   
 
     public void Run()
     { 
