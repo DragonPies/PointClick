@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public static List<PlayerMovement> moveableObjects = new List<PlayerMovement>();
     public Vector2 targetPosition;
     public Rigidbody2D _playerRB2D;
+    public bool isMoving;
 
     public Stats playerStats;
 
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
         if (Vector2.Distance(transform.position, targetPosition) > 0.1f)
         {
             _playerRB2D.linearVelocity = (targetPosition - (Vector2)transform.position).normalized * playerStats.speed;
+            isMoving = true;
 
             _anim.SetFloat("x", _playerRB2D.linearVelocity.normalized.x);
             _anim.SetFloat("y", _playerRB2D.linearVelocity.normalized.y);
@@ -40,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             _playerRB2D.linearVelocity = Vector2.zero;
+            isMoving = false;
         }
 
 
