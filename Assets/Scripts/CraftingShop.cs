@@ -24,6 +24,14 @@ public class CraftingShop : MonoBehaviour
 
     public bool stoneAxeBought;
 
+    public bool ironSwordBought;
+
+    public bool ironShieldBought;
+
+    public bool ironPickBought;
+
+    public bool ironAxeBought;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -95,7 +103,8 @@ public class CraftingShop : MonoBehaviour
     {
         if (stats.pineCount >= 10 && stats.stoneCount >= 15 && !stoneSwordBought)
         {
-            stats.woodCount -= 10;
+            stats.pineCount -= 10;
+            stats.stoneCount -= 15;
             stats.atkdamage = 3;
             woodenSwordBought = false;
             stoneSwordBought = true;
@@ -106,7 +115,7 @@ public class CraftingShop : MonoBehaviour
     {
         if (stats.pineCount >= 8 && stats.stoneCount >= 12 && !stoneShieldBought)
         {
-            stats.woodCount -= 8;
+            stats.pineCount -= 8;
             stats.stoneCount -= 12;
             stats.defense = 10;
             woodenShieldBought = false;
@@ -120,7 +129,7 @@ public class CraftingShop : MonoBehaviour
         if (stats.stoneCount >= 10 && stats.pineCount >= 5 && !stonePickBought)
         {
             stats.stoneCount -= 10;
-            stats.woodCount -= 5;
+            stats.pineCount -= 5;
             stats.pickBreakPower = 3;
             stats.pickDamage = 3;
             stonePickBought = true;
@@ -138,12 +147,23 @@ public class CraftingShop : MonoBehaviour
         if (stats.stoneCount >= 10 && stats.pineCount >= 5 && !stoneAxeBought)
         {
             stats.stoneCount -= 10;
-            stats.woodCount -= 5;
+            stats.pineCount -= 5;
             stats.axeBreakPower = 3;
             stats.axeDamage = 3;
             stoneAxeBought = true;
             woodenAxeBought = false;
 
+        }
+    }
+
+    public void BuyIronSword()
+    {
+        if (stats.oakCount >= 10 && stats.ironCount >= 15 && !ironSwordBought)
+        {
+            stats.oakCount -= 10;
+            stats.atkdamage = 3;
+            woodenSwordBought = false;
+            stoneSwordBought = true;
         }
     }
 
