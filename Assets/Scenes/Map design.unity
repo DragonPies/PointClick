@@ -1509,7 +1509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8b2155f89974c44f8870276d5f3c871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayDuration: 0.25
+  dayDuration: 20
   mainCamera: {fileID: 157137939}
 --- !u!1 &163425929
 GameObject:
