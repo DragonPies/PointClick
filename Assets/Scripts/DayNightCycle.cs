@@ -1,50 +1,65 @@
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class DayNightCycle : MonoBehaviour
 {
-    public float dayDuration = 60f; // Duration of a full day in seconds
-    public Camera mainCamera;
+    public float dayDuration = .1f; // Duration of a full day in seconds
 
     private float timer;
+    private float nightDuration;
+
+    private float transitionDuration; // Duration of the transition between day and night
+
     private bool isDay = true;
     private bool isNight;
 
+    public Camera mainCamera;
+
     private Volume volume;
-    //private vignette vignette;
+    private Vignette vignette;
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        timer = dayDuration;
+        timer = (dayDuration * 60);
+        nightDuration = (dayDuration * 60) / 2;
         volume = mainCamera.GetComponent<Volume>();
-        //volume.profile.TryGet<Vignette>(out vignette);
+        volume.profile.TryGet<Vignette>(out vignette);
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
-
-        if (timer <= 0 && isDay)
+        if (isNight)
         {
-            timer = dayDuration;
-            isDay = false;
-            isNight = true;
-            //vignette.intensity.value = 0.3f;
-            //vignette.Rounded = false;
+            nightDuration -= Time.deltaTime;
+
+            if (nightDuration <= 0)
+            {
+                vignette.intensity.value = .3f;
+                vignette.rounded.value = false;
+                isNight = false;
+                isDay = true;
+                nightDuration = (dayDuration * 60) / 2;
+            }
         }
 
-        else if (timer <= 0 && isNight)
+        if (isDay)
         {
-            timer = dayDuration;
-            isNight = false;
-            isDay = true;
-            //vignette.intensity.value = 1f;
-            //vignette.Rounded = true;
+            timer -= Time.deltaTime;
+
+            if (timer <= 0)
+            {
+                vignette.intensity.value = 1f;
+                vignette.rounded.value = true;
+                isDay = false;
+                isNight = true;
+                timer = (dayDuration * 60);
+            }
         }
 
- 
     }
 }
