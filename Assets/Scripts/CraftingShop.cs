@@ -36,7 +36,7 @@ public class CraftingShop : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       
+
     }
 
     // Update is called once per frame
@@ -75,7 +75,7 @@ public class CraftingShop : MonoBehaviour
     }
     public void BuyWoodenPick()
     {
-        
+
 
         if (stats.woodCount >= 5 && !woodenPickBought)
         {
@@ -126,7 +126,7 @@ public class CraftingShop : MonoBehaviour
     {
 
 
-        if (stats.stoneCount >= 10 && stats.pineCount >= 5 && !stonePickBought)
+        if (stats.pineCount >= 5 && stats.stoneCount >= 10 && !stonePickBought)
         {
             stats.stoneCount -= 10;
             stats.pineCount -= 5;
@@ -137,14 +137,14 @@ public class CraftingShop : MonoBehaviour
 
         }
 
-   
+
     }
 
     public void BuyStoneAxe()
     {
 
 
-        if (stats.stoneCount >= 10 && stats.pineCount >= 5 && !stoneAxeBought)
+        if (stats.pineCount >= 5 && stats.stoneCount >= 10 && !stoneAxeBought)
         {
             stats.stoneCount -= 10;
             stats.pineCount -= 5;
@@ -158,14 +158,56 @@ public class CraftingShop : MonoBehaviour
 
     public void BuyIronSword()
     {
-        if (stats.oakCount >= 10 && stats.ironCount >= 15 && !ironSwordBought)
+        if (stats.oakCount >= 12 && stats.ironCount >= 17 && !ironSwordBought)
         {
             stats.oakCount -= 10;
-            stats.atkdamage = 3;
+            stats.ironCount -= 15;
+            stats.atkdamage = 4;
             woodenSwordBought = false;
-            stoneSwordBought = true;
+            stoneSwordBought = false;
+            ironSwordBought = true;
         }
     }
 
+    public void BuyIronShield()
+    {
+        if (stats.oakCount >= 10 && stats.ironCount >= 14 && !ironShieldBought)
+        {
+            stats.oakCount -= 10;
+            stats.ironCount -= 12;
+            stats.defense = 15;
+            woodenShieldBought = false;
+            stoneShieldBought = false;
+            ironShieldBought = true;
+        }
+    }
 
+    public void BuyIronPick()
+    {
+        if (stats.oakCount >= 7 && stats.ironCount >= 12 && !ironPickBought)
+        {
+            stats.ironCount -= 12;
+            stats.oakCount -= 7;
+            stats.pickBreakPower = 4;
+            stats.pickDamage = 4;
+            stonePickBought = false;
+            woodenPickBought = false;
+            ironPickBought = true;
+        }
+    }
+
+    public void BuyIronAxe()
+    {
+        if (stats.oakCount >= 7 && stats.ironCount >= 12 && !ironAxeBought)
+        {
+            stats.ironCount -= 12;
+            stats.oakCount -= 7;
+            stats.axeBreakPower = 4;
+            stats.axeDamage = 4;
+            stoneAxeBought = false;
+            woodenAxeBought = false;
+            ironAxeBought = true;
+        }
+
+    }
 }
