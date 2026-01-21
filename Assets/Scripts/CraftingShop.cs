@@ -42,7 +42,7 @@ public class CraftingShop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        stats = GameObject.FindGameObjectWithTag("Player 1").GetComponent<Stats>();
+
     }
 
     public void SpawnCraftingTable()
@@ -160,8 +160,8 @@ public class CraftingShop : MonoBehaviour
     {
         if (stats.oakCount >= 12 && stats.ironCount >= 17 && !ironSwordBought)
         {
-            stats.oakCount -= 10;
-            stats.ironCount -= 15;
+            stats.oakCount -= 12;
+            stats.ironCount -= 17;
             stats.atkdamage = 4;
             woodenSwordBought = false;
             stoneSwordBought = false;
@@ -174,7 +174,7 @@ public class CraftingShop : MonoBehaviour
         if (stats.oakCount >= 10 && stats.ironCount >= 14 && !ironShieldBought)
         {
             stats.oakCount -= 10;
-            stats.ironCount -= 12;
+            stats.ironCount -= 14;
             stats.defense = 15;
             woodenShieldBought = false;
             stoneShieldBought = false;

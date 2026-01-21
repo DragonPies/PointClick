@@ -8,21 +8,25 @@ public class ToolsUI : MonoBehaviour
     public GameObject sword;
     public Sprite woodenSword;
     public Sprite stoneSword;
+    public Sprite ironSword;
 
     [Header("Shields")]
     public GameObject shield;
     public Sprite woodenShield;
     public Sprite stoneShield;
+    public Sprite ironShield;
 
     [Header("Pickaxes")]
     public GameObject pick;
     public Sprite woodenPick;
     public Sprite stonePick;
+    public Sprite ironPick;
 
     [Header("Axes")]
     public GameObject axe;
     public Sprite woodenAxe;
     public Sprite stoneAxe;
+    public Sprite ironAxe;
 
     [Header("Misc")]
     public CraftingShop toolUI;
@@ -53,6 +57,12 @@ public class ToolsUI : MonoBehaviour
             sword.GetComponent<Image>().sprite = stoneSword;
         }
 
+        if (combatUI.ironSwordBought)
+        { 
+            sword.GetComponent<Image>().color = Color.white;
+            sword.GetComponent<Image>().sprite = ironSword;
+        }
+
         if (combatUI.woodenShieldBought)
         { 
             shield.GetComponent<Image>().color = Color.white;
@@ -63,6 +73,12 @@ public class ToolsUI : MonoBehaviour
         { 
             shield.GetComponent<Image>().color = Color.white;
             shield.GetComponent<Image>().sprite = stoneShield;
+        }
+
+        if (combatUI.ironShieldBought)
+        { 
+            shield.GetComponent<Image>().color = Color.white;
+            shield.GetComponent<Image>().sprite = ironShield;
         }
 
         if (toolUI.woodenPickBought)
@@ -77,6 +93,12 @@ public class ToolsUI : MonoBehaviour
             pick.GetComponent<Image>().sprite = stonePick;
         }
 
+        if (toolUI.ironPickBought)
+        { 
+            pick.GetComponent<Image>().color = Color.white;
+            pick.GetComponent<Image>().sprite = ironPick;
+        }
+
         if (toolUI.woodenAxeBought)
         { 
             axe.GetComponent<Image>().color = Color.white;
@@ -87,6 +109,12 @@ public class ToolsUI : MonoBehaviour
         { 
             axe.GetComponent<Image>().color = Color.white;
             axe.GetComponent<Image>().sprite = stoneAxe;
+        }
+
+        if (toolUI.ironAxeBought)
+        { 
+            axe.GetComponent<Image>().color = Color.white;
+            axe.GetComponent<Image>().sprite = ironAxe;
         }
     }
 }

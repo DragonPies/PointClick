@@ -8596,15 +8596,19 @@ MonoBehaviour:
   sword: {fileID: 801466591}
   woodenSword: {fileID: -3493546860208996330, guid: 4cbaaf5569aa06a43b21f07e9c6751ce, type: 3}
   stoneSword: {fileID: 8645510945980340434, guid: 31f31dead649c9749a6eb7ed2c6b3f96, type: 3}
+  ironSword: {fileID: -8689091491375935107, guid: 6eb77490c41ded84b9297e7c420cc1b2, type: 3}
   shield: {fileID: 218873352}
   woodenShield: {fileID: -6524913214751168883, guid: 9552c8dbc39c37b42a2e7c64a7c91b04, type: 3}
   stoneShield: {fileID: -8573597042891743042, guid: 3c9905bf89b4b744883ec3176f629d77, type: 3}
+  ironShield: {fileID: 3161845086389986138, guid: bcef6cc217287d149a85d3752cc2d667, type: 3}
   pick: {fileID: 30917724}
   woodenPick: {fileID: 796544688495589534, guid: eb870d0277e9611459481fb6400f49fe, type: 3}
   stonePick: {fileID: -9145421099268339611, guid: 881ebf5ae84790345b365a4f5cfa4c67, type: 3}
+  ironPick: {fileID: -631133060819828322, guid: 4511866ba6cc8a54c92154621ad815e4, type: 3}
   axe: {fileID: 517782358}
   woodenAxe: {fileID: 156415195015926042, guid: c740dc7d7e030cd488da1e8907b563f2, type: 3}
   stoneAxe: {fileID: -1693675698735848151, guid: 2d5a608c5ecb74f40947562d40db39ba, type: 3}
+  ironAxe: {fileID: 5127326418951840272, guid: 57d4f88b25f62964197170c81cb21942, type: 3}
   toolUI: {fileID: 296091720}
   combatUI: {fileID: 427002560}
   structureUI: {fileID: 1477487638}
