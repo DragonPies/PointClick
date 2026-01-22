@@ -8,13 +8,13 @@ public class PlayerMovement : MonoBehaviour
     public static List<PlayerMovement> moveableObjects = new List<PlayerMovement>();
     public Vector2 targetPosition;
     public Rigidbody2D _playerRB2D;
-    public bool isMoving;
 
     public Stats playerStats;
 
 
     public Animator _anim;
     private bool selected;
+    public bool isMoving;
 
     private void Awake()
     {
@@ -35,12 +35,13 @@ public class PlayerMovement : MonoBehaviour
         {
             _playerRB2D.linearVelocity = (targetPosition - (Vector2)transform.position).normalized * playerStats.speed;
             isMoving = true;
-
             _anim.SetFloat("x", _playerRB2D.linearVelocity.normalized.x);
             _anim.SetFloat("y", _playerRB2D.linearVelocity.normalized.y);
+            
         }
         else
         {
+            
             _playerRB2D.linearVelocity = Vector2.zero;
             isMoving = false;
         }
@@ -51,6 +52,10 @@ public class PlayerMovement : MonoBehaviour
             Move();
         }
 
+        if (isMoving)
+            _anim.SetBool("isWalking", true);
+        else
+            _anim.SetBool("isWalking", false);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
